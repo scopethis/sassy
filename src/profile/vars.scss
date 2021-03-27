@@ -1,0 +1,28 @@
+$baseColour: #2f3d45;
+$navLinkColourMap: (
+  link: #ffffff,
+  hover #ffffff,
+  active: #ffffff,
+  visited: #ffffff,
+  underline: #818181,
+);
+
+// Content positions
+$content: (
+  left: (
+    small: 35px,
+    large: 380px
+  ),
+  top: (
+    small: 145px
+  )
+);
+
+$navigation: (
+  left: (
+    small: 300px
+  ),
+  top: (
+    small: 46px
+  )
+);

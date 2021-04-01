@@ -36,7 +36,7 @@
 
 @mixin headline() {
     font-family: map-get(fonts.$standout, 'family'), serif;
-    font-weight: map-get(fonts.$standout, 'headline-weight');
+    font-weight: map-get(fonts.$standout, 'default-weight');
     font-size: map-get(fonts.$standout, 'headline-size');
 }
 

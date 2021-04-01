@@ -1,0 +1,81 @@
+@use './vars';
+@use './type';
+
+// Selector for looking after
+// content displayed on the right hand side
+@mixin content($positioning: 'default') {
+    $layout: map-get(vars.$contentPositioning, $positioning);
+    $contentPos: map-get($layout, 'position');
+    $contentPad: map-get($layout, 'padding');
+    $contentSize: map-get($layout, 'size');
+
+    $padLeft: map-get($contentPad, 'left');
+    $padTop: map-get($contentPad, 'top');
+    $posLeft: map-get($contentPos, 'left');
+    $posTop: map-get($contentPos, 'top');
+    $posBottom: map-get($contentPos, 'top');
+    $sizeH: map-get($contentSize, 'height');
+
+    height: map-get($sizeH, 'small');
+    padding-left: map-get($padLeft, 'small');
+    @media (min-width: 700px){
+        position: absolute;
+        left: map-get($posLeft, 'large');
+        top: map-get($posTop, 'large');
+        bottom: map-get($posBottom, 'large');
+        right: 0;
+        height: map-get($sizeH, 'large');
+        padding-top: map-get($padTop, 'large');
+        padding-left: 0;
+    }
+}
+
+// Mixin for looking after left hand navigation
+$navigationVPos: map-get(vars.$navigation, 'left');
+$navigationHPos: map-get(vars.$navigation, 'top');
+@mixin navigation() {
+    position: absolute;
+    left: map-get($navigationVPos, 'small');
+    top: map-get($navigationHPos, 'small');
+    display: flex;
+    flex-direction: column;
+
+    @media (min-width: 700px){
+        position: fixed;
+    }
+
+    a {
+        @include type.link(vars.$navLinkColourMap);
+        margin-bottom: 8px;
+    }
+}
+
+@mixin profile() {
+    background-color: vars.$downPipeGrey;
+
+    [class*="wrapper"] {
+        width: 230px;
+        padding-bottom: 25px;
+    }
+    [class*="heading__wrapper"]{
+      border-bottom: 3px solid lighten(vars.$hagueBlue, 40%);;
+    }
+
+    @media (min-width: 700px){
+        position: fixed;
+        width: 100%;
+    }
+}
+
+@mixin profileBlock($backgroundColour: vars.$downPipeGrey) {
+    padding: vars.$defaultPadding;
+    padding-bottom: 0;
+    background-color: $backgroundColour;
+}
+
+@mixin lastProfileBlock() {
+    margin-bottom: 25px;
+    @media (min-width: 700px){
+        margin-bottom: 0;
+    }
+}

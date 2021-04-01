@@ -1,0 +1,19 @@
+$standout: (
+  family: "Cormorant Garamond",
+  default-weight: 400,
+  default-size: 32px,
+  headline-weight: 600,
+  headline-size: 25px,
+  article-size: 28px
+);
+
+$regular: (
+  family: "Raleway",
+  default-weight: 400,
+  default-size: 16px
+);
+
+
+@mixin smoothing() {
+  -webkit-font-smoothing: antialiased;
+}

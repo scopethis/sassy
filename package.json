@@ -3,8 +3,7 @@
   "version": "0.0.1",
   "description": "SASS based CSS library",
   "main": "index.js",
-  "scripts": {
-  },
+  "scripts": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/scopethis/sassy.git"

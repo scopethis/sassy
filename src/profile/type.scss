@@ -1,0 +1,47 @@
+@use './vars';
+@use './fonts';
+
+@mixin link ($colourMap) {
+    text-decoration: none;
+    &:link { color: map-get($colourMap, 'link') }
+    &:hover { color: map-get($colourMap, 'hover') }
+    &:active { color: map-get($colourMap, 'active') }
+    &:visited { color: map-get($colourMap, 'visited') }
+    color: map-get($colourMap, 'link');
+
+    span {
+        border-bottom: 1px solid map-get($colourMap, 'underline');
+    }
+}
+
+@mixin body() {
+    font-family: map-get(fonts.$regular, 'family'), sans-serif;
+    font-weight: map-get(fonts.$regular, 'default-weight');
+    font-size: map-get(fonts.$regular, 'default-size');
+}
+
+@mixin title() {
+    font-family: map-get(fonts.$standout, 'family'), serif;
+    font-weight: map-get(fonts.$standout, 'default-weight');
+    font-size: map-get(fonts.$standout, 'default-size');
+    color: #ffffff;
+}
+
+@mixin subtitle() {
+    font-family: map-get(fonts.$regular, 'family'), sans-serif;
+    font-weight: map-get(fonts.$regular, 'default-weight');
+    font-size: map-get(fonts.$regular, 'default-size');
+    color: lighten(vars.$hagueBlue, 40%);
+}
+
+@mixin headline() {
+    font-family: map-get(fonts.$standout, 'family'), serif;
+    font-weight: map-get(fonts.$standout, 'headline-weight');
+    font-size: map-get(fonts.$standout, 'headline-size');
+}
+
+@mixin articleHeadline() {
+    font-family: map-get(fonts.$standout, 'family'), serif;
+    font-weight: map-get(fonts.$standout, 'headline-weight');
+    font-size: map-get(fonts.$standout, 'article-size');
+}

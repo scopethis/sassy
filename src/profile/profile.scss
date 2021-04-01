@@ -1,0 +1,31 @@
+@use './layout';
+@use './vars';
+@use './type';
+
+.profile-heading,
+.profile-description {
+    @include layout.profileBlock();
+}
+
+.profile-role {
+    @include layout.profileBlock(vars.$hagueBlue);
+    @include layout.lastProfileBlock();
+}
+
+.profile-heading__title {
+    @include type.title();
+}
+
+.profile-heading__subtitle {
+    @include type.subtitle();
+}
+
+.profile-description__content {
+    @include type.headline();
+    color: #ffffff;
+}
+
+.profile-role__content {
+    @include type.headline();
+    color: lighten(vars.$hagueBlue, 40%);
+}

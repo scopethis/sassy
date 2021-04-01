@@ -1,21 +1,84 @@
-$baseColour: #2f3d45;
+$hagueBlue: #2f3d45;
+$downPipeGrey: #4F4F4F;
+
+$defaultPadding: 35px;
+
 $navLinkColourMap: (
   link: #ffffff,
-  hover #ffffff,
+  hover: #ffffff,
   active: #ffffff,
   visited: #ffffff,
   underline: #818181,
 );
 
+$articleLinkColourMap: (
+  link: darken($hagueBlue, 20%),
+  hover: $hagueBlue,
+  active: $hagueBlue,
+  visited: darken($hagueBlue, 20%),
+  underline: #818181,
+);
+
 // Content positions
 $content: (
-  left: (
-    small: 35px,
-    large: 380px
+  position: (
+    left: (
+      large: 380px
+    ),
+    top: (
+      large: unset
+    ),
+    bottom: (
+      large: unset
+    ),
   ),
-  top: (
-    small: 145px
+  size: (
+    height: (
+      small: unset,
+      large: unset
+    )
+  ),
+  padding: (
+    top: (
+      large: 145px
+    ),
+    left: (
+      small: $defaultPadding,
+    )
   )
+);
+
+$formContent: (
+  position: (
+    left: (
+      large: 380px
+    ),
+    top: (
+      large: 0
+    ),
+    bottom: (
+      large: 0
+    ),
+  ),
+  size: (
+    height: (
+      small: 400px,
+      large: 100%
+    )
+  ),
+  padding: (
+    top: (
+      large: 0
+    ),
+    left: (
+      small: $defaultPadding,
+    )
+  )
+);
+
+$contentPositioning: (
+  default: $content,
+  form: map-merge($content, $formContent)
 );
 
 $navigation: (

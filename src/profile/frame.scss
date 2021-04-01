@@ -1,0 +1,20 @@
+@use './layout';
+
+.profile {
+    @include layout.profile()
+}
+
+.content {
+    @include layout.content();
+}
+
+.form {
+    @include layout.content('form');
+    .typeform-widget {
+      background-color: #172025;
+    }
+}
+
+.main-nav {
+    @include layout.navigation();
+}

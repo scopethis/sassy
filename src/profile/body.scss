@@ -1,0 +1,17 @@
+@use './type';
+@use './vars';
+
+body {
+    -webkit-font-smoothing: antialiased;
+    background-color: vars.$hagueBlue;
+}
+
+body,
+body * {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    @include type.body();
+}

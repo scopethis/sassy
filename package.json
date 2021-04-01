@@ -1,6 +1,6 @@
 {
   "name": "@scopethis/sassy",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "SASS based CSS library",
   "main": "index.js",
   "scripts": {},

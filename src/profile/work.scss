@@ -4,7 +4,8 @@
     list-style: none;
 
     h2, h3 {
-        @include type.headline(#ffffff);
+        @include type.headline();
+        color: #ffffff;
         margin-bottom: 10px;
     }
 
